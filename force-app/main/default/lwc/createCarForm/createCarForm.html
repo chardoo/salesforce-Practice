@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout class="slds-align_absolute-center slds-text-align_center container" multiple-rows>
+        <lightning-layout-item>
+             <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                    <h2>Add Car</h2>
+                    <lightning-input type="text" name="chasis" label="Chassis Number" value={chasis} onchange= {inputChasis} placeholder="Enter the Chassis Number" ></lightning-input>
+                    <lightning-input type="text" name="carName" label="Name of Car" value={carName} onchange=  {inputCarName} placeholder="Enter the name of the Car" ></lightning-input>
+                    <lightning-input type="number" name="carPrice" label="Car Price" value={carPrice} onchange={inputPrice} placeholder="Enter the price of the Car" ></lightning-input>
+                    <lightning-input type="text" name="carStatus" label="Status" value={status}       onchange={inputStatus} ></lightning-input>
+                    <lightning-input type="date" name="arrivlDate" label="Arrival Date" value={arrivalDate}       onchange={inputarrivalDate} ></lightning-input>
+                   
+                    <lightning-button type="submit" name="submit" label=" Add " onclick = {addNewCar}></lightning-button>
+             </div>
+    </lightning-layout-item>
+</lightning-layout>
+   
+</template>

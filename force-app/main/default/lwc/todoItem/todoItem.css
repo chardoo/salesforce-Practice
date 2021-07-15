@@ -1,0 +1,23 @@
+.todo{
+    border: 1rem solid lightgray;
+    padding: .5rem;
+    width:fit-content;
+    border-radius: 8px;
+    margin-top: auto;
+     margin-left: auto;
+     transition: all .5s ease;
+}
+.completed{
+    background-color: blue;
+}
+.completed:hover{
+    background-color: aliceblue;
+}
+
+.upcoming{
+    background-color: brown;
+}
+
+.upcoming:hover{
+    background-color: chocolate;
+}
