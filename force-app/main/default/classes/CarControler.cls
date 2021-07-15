@@ -43,16 +43,16 @@ public with sharing class CarControler {
         return String.valueOf(newcar.Id);
        }
        
-    //    @AuraEnabled
-    //    public static void updateCar(String payload){
-    //     Car payloader = (Car) JSON.deserialize(payload, Car.class);
-    //     List<Car__c> result = [ SELECT Id, Name, State__c, Price__c FROM Car__c  WHERE Id = :payloader.Id];
-    //     for(Car__c car: result){
-    //         car.State__c = payloader.state;
-    //     }
+       @AuraEnabled
+       public static void updateCar(String payload){
+        Car payloader = (Car) JSON.deserialize(payload, Car.class);
+        List<Car__c> result = [ SELECT Id, Name, State__c, Price__c FROM Car__c  WHERE Id = :payloader.Id];
+        for(Car__c car: result){
+            car.State__c = payloader.state;
+        }
     
-    //     update result;
-    //    }
+        update result;
+       }
     
        class Car{
            @AuraEnabled
